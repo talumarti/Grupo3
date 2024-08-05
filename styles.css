@@ -1,0 +1,230 @@
+body{
+    margin:20PX;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #5B98A6;
+    color: #f2f2f2;
+    text-align: center;
+}  
+
+div, ul, nav, header, footer, a, li, label, h1, body, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* estilo del logo */ 
+.header_logo {
+    width: 50px;
+    border-radius: 150%;
+    float: left;
+    padding:0;
+}
+
+/* Estilo del encabezado*/
+header{
+    background-color: #D90B0b;
+    color: #f2f2f2;
+    padding: 5px;
+}
+
+/* Estilo de la navegacion */
+nav{
+    background-color: #325A73;
+    padding: 5px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav a{
+    color: #f2f2f2;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: underline;
+}
+
+/* BOTONES ADELANTE/ATRAS */
+button {
+    background-color: #323333;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #005689;
+}
+
+/* Estilos de la galería de carros */
+
+.img_button{
+    height: 20px;
+    width: 20px;
+}
+
+.texto__inicial{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 20px;
+    justify-content: center;
+}
+.section {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+p {
+    padding: 10px;
+}
+.image__container img {
+    width: 80%;
+    height: auto;
+    min-width: 400px;
+    max-width: 500px;
+    container-name: image_car;
+}
+
+.section_car {
+    flex-grow: 1;
+    grid-auto-rows: 1fr;
+    grid-auto-flow: dense;
+    display: flex;
+    color: white;
+    align-items: center;
+    box-shadow: #f2f2f2 5px 5px 20px 10px;
+}
+
+#section_car-BMW {
+    background-color: #A6121F;
+}
+#section_car-jaguar {
+    background-color: #161414;
+}
+#section_car-rollsroyce {
+    background-color: #A6121F;
+}
+
+.button__back-container, .button__forward-container {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.button__back-container {
+    container-name: button_back;
+}
+
+.button__forward-container {
+    container-name: button_forward;
+}
+
+/* barra inferior */
+
+.form__input-container input[type="submit"]:hover,
+.form__input-container input[type="reset"]:hover {
+    background-color: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;}
+
+    /* Formulario */ 
+
+    .form {
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 0 ;
+        container-name: form;
+        container-type: inline-size;
+    }
+    
+    .form__form {
+        padding: 12px;
+        max-width: 800px;
+        width: 100%;
+        display: grid;
+    }
+    
+    .form__input-container :is(input, textarea) {
+        width: 100%;
+        padding: 9px 9px;
+        font-size: 1rem;
+        margin: 4px;
+        border: none;
+        box-shadow: 0px 0px 9px #0003;
+        border-radius: 16px;
+    }
+    
+    .form__input-container textarea {
+        resize: none;
+        min-height: 120px;
+        font-family: inherit;
+    }
+    
+    .form__input-container input[type=submit] {
+        padding: 12px;
+        background-color: #444;
+        color: #FFF;
+    }
+    
+    footer{
+        background-color: rgb(12, 12, 12);
+        width: 100%;
+        color: #fff;
+        font-size: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+
+/* -------- Sección de Queries ------------------------- */ 
+
+    @media (max-width: 800px) {
+        .section {
+            flex-direction: column;
+        
+        }
+        .section_car {
+            flex-direction: column;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    
+        .image__container {
+            width: 100%;
+        }
+    
+        .texto__informacion {
+            margin-top: 20px;
+        }
+
+        section.form {
+            text-align: center;
+        }
+
+        .form__input-container {
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            text-align: left;
+        }
+
+    }
