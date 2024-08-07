@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link rel="short icon" href="Multimedia/favicon.png" type="image/x-icon">
+</head>
+<body class="body_usuario">
+    <header>
+        <h1>Venta de carros<img class="header_logo" src="Multimedia/favicon.png" alt="header_logo"></h1>
+    </header>
+    <nav class="nav_usuario">  
+        <div>
+            <ul>
+                <li><a href="Sobre Nosotos" target="_self">Sobre nosotros</a></li>
+                <li><a href="Servicios" target="_self">Servicios</a></li>
+                <li><a href="Formulario" target="_self">Formulario</a></li>
+                <li class="nav_item">
+                    <a class="nav_link"    href="usuario.html" target="_self">Usuario</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <h2>Formulario de Usuarios</h2>
+            <form class="userForm">
+                <div class="form-group">
+                    <label for="userId">ID de Usuario</label>
+                    <input type="text" id="userId" name="userId" placeholder="Ingrese el ID del usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="userName">Nombre</label>
+                    <input type="text" id="userName" name="userName" placeholder="Ingrese el nombre del usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Correo Electrónico</label>
+                    <input type="email" id="userEmail" name="userEmail" placeholder="Ingrese el correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <div class="form_button">
+                        <button type="submit">Agregar/Modificar Usuario</button>
+                        <button type="button" id="deleteUser">Eliminar Usuario</button>  
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <footer> <strong>Venta de vehiculos de alta gama</strong> Copyright 2024</footer>
+</body>
+</html>
