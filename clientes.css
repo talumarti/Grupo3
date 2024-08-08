@@ -1,0 +1,17 @@
+.form{
+    padding: 20px;
+    border: solid;
+    border-color: black;
+    margin: 20px;
+    background-color: brown;
+    font-weight: 600;
+    width:350px;
+   }
+
+label{
+    font-family: cursive;
+    }
+button{
+    justify-self: auto;
+    padding: 8px;
+}
