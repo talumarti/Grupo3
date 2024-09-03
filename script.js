@@ -89,7 +89,7 @@ const previewImage3 = () => {
 /* Formulario */
 
 window.addEventListener('load', () => {
-    const form = document.getElementById('contactForm');
+    const form = document.getElementById('registrationForm');
     form.addEventListener("submit",(event)=>{try {
         const name = document.getElementById('inputName').value;
         const lastName = document.getElementById('inputLastName').value;
@@ -111,3 +111,22 @@ window.addEventListener('load', () => {
     } catch (error) {
         console.error(error);
     }});});
+
+/* Confirmación en el formulario de que las contraseñas escritas son las mismas */
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector("form");
+        const password = document.getElementById("password");
+        const confirmPassword = document.getElementById("confirm-password");
+        const errorMessage = document.getElementById("error-message");
+
+        form.addEventListener("submit", function(event) {
+            // Verificar si las contraseñas coinciden
+            if (password.value !== confirmPassword.value) {
+                event.preventDefault(); // Evita que el formulario se envíe
+                errorMessage.style.display = "block"; // Muestra el mensaje de error
+            } else {
+                errorMessage.style.display = "none"; // Oculta el mensaje de error
+            }
+        });
+    });
